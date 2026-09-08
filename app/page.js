@@ -8,11 +8,9 @@ import Image from "next/image";
 
 const MARQUEE_ITEMS = [
   "SKP Pembelajaran & Pengabdian",
-  "10 Track Simposium",
+  "10 Sesi Simposium",
   "3 Hari · 11–13 September 2026",
   "Call for Paper Oral Presentation",
-  "Job Fair",
-  "Pameran Industri Farmasi",
   "Sahid Raya Hotel Yogyakarta",
 ];
 
@@ -49,62 +47,87 @@ const SIMPOSIUM_TINTS = [
   "from-gold/10 to-gold/5",
   "from-red/8 to-red-soft/10",
   "from-navy/8 to-navy/4",
+  "from-gold/12 to-cream-warm/30",
 ];
 
 const SIMPOSIUM = [
   {
     ruangan: "Ballroom 1",
     jam: "13.30–15.00",
-    narasumber: "dr. H. Harli Amir Mahmudji, Sp.PD – Sub. Sp EMD (K)",
+    sesi: "Materi 1",
+    narasumber: "dr. H. Harli Amir Mahmudi, Sp.PD-Sub Sp EMD (K)",
     topik: "Evidence Update in Chronic Disease Management: Optimizing Diabetes Therapy",
-  },
-  {
-    ruangan: "Ballroom 1",
-    jam: "15.30–17.00",
-    narasumber: "apt. Tunggul Wardani, M.Farm",
-    topik: "Transformasi Praktik Kefarmasian Modern dalam Perawatan Luka: Peran Strategis Octenidine dan Allantoin",
+    moderator: "apt. Arifanti Piskana S., M.Pharm.Clin",
   },
   {
     ruangan: "Ballroom 2",
     jam: "13.30–15.00",
-    narasumber: "Prof. Dr. apt. Ika Puspita Sari, S.Si., M.Si.",
+    sesi: "Materi 1",
+    narasumber: "apt. Tunggul Wardani, M.Farm",
+    topik:
+      "Transformasi Praktik Kefarmasian Modern dalam Perawatan Luka: Peran Strategis Octenidin dan Allantoin",
+    moderator: "apt. Shofia Wijayanti, M.Farm",
+  },
+  {
+    ruangan: "Arjuna 1",
+    jam: "13.30–15.00",
+    sesi: "Materi 1",
+    narasumber: "Dr. apt. Rifki Febriansyah, M.Sc.",
+    topik: "Pemanfaatan dan Penelitian Terkini Nutraceutical dalam Peningkatan Kesehatan",
+    moderator: "apt. Kuswardhani Dwi Atmini, MSc",
+  },
+  {
+    ruangan: "Kresna",
+    jam: "13.30–15.00",
+    sesi: "Materi 1",
+    narasumber: "apt. Eliza Dwinta, M.Pharm., Sci",
+    topik:
+      "Beyond Burnout: Fostering Resilience and Well-being Among Pharmacists for the Intelligent Future",
+    moderator: "apt. Yunlistianingsih, M.Farm",
+  },
+  {
+    ruangan: "Arjuna 2",
+    jam: "13.30–15.00",
+    sesi: "Materi 1",
+    narasumber: "Apt. Lalu Muhammad Irham, M.Farm, Ph.D",
+    topik:
+      "Bioinformatika dan Drug Repurposing: Mendorong Inovasi Penemuan Obat di Era Genomik dan Multi-Omics",
+    moderator: "Apt. Nurul Hikmah, M. Clin. Pharm",
+  },
+  {
+    ruangan: "Ballroom 1",
+    jam: "15.00–16.30",
+    sesi: "Materi 2",
+    narasumber: "Prof. Dr. Ika Puspita Sari, S.Si., M.Si., Apt.",
     topik: "One Health dalam Pengendalian Resistensi Antimikroba: Peran Strategis Apoteker",
   },
   {
     ruangan: "Ballroom 2",
-    jam: "15.30–17.00",
-    narasumber: "Dr. apt. Christine Patramurti",
-    topik: "Peran Apoteker di Era Pengobatan Presisi",
+    jam: "15.00–16.30",
+    sesi: "Materi 2",
+    narasumber: "Prof. apt. Suci Hanifah, Ph.D",
+    topik: "Management Intravenous Medication Problem's and Incompatibilities in The ICU",
   },
   {
     ruangan: "Arjuna 1",
-    jam: "13.30–15.00",
-    narasumber: "Dr. apt. Rifki Febriansyah, M.Sc.",
-    topik: "Pemanfaatan dan Penelitian Terkini Nutraceutical dalam Peningkatan Kesehatan",
-  },
-  {
-    ruangan: "Arjuna 1",
-    jam: "15.30–17.00",
+    jam: "15.00–16.30",
+    sesi: "Materi 2",
     narasumber: "Dr. apt. Ani Kristiani, M.Clin.Pharm",
     topik: "Pengembangan Bahan Alam untuk Depresi",
   },
   {
-    ruangan: "Arjuna 2",
-    jam: "13.30–15.00",
-    narasumber: "apt. Eliza Dwinta, M.Pharm., Sci",
-    topik: "Beyond Burnout: Fostering Resilience and Well-being Among Pharmacists for the Intelligence Future",
-  },
-  {
-    ruangan: "Arjuna 2",
-    jam: "15.30–17.00",
-    narasumber: "Dr. apt. Fivy Kurniawati, S.Farm, M.Sc.",
+    ruangan: "Kresna",
+    jam: "15.00–16.30",
+    sesi: "Materi 2",
+    narasumber: "Dr. apt. Fuwi Kurniawati, S.Farm., M.Sc.",
     topik: "From Data to Decision: Apoteker sebagai Garda Terdepan Keamanan Obat di Era Digital",
   },
   {
-    ruangan: "Puntadewa",
-    jam: "13.30–15.00",
-    narasumber: "Prof. apt. Suci Hanifah, Ph.D",
-    topik: "Management of Incompatibility Medication in ICU",
+    ruangan: "Arjuna 2",
+    jam: "15.00–16.30",
+    sesi: "Materi 2",
+    narasumber: "Dr. apt. Christine Patramurti",
+    topik: "Peran Apoteker di Era Pengobatan Presisi",
   },
 ].map((item, i) => ({ ...item, tint: SIMPOSIUM_TINTS[i % SIMPOSIUM_TINTS.length] }));
 
@@ -122,7 +145,6 @@ const TICKETS = [
 ];
 
 const TICKET_FASILITAS = [
-  "Job Fair",
   "Ekshibisi & Pameran",
   "Semua Simposium",
   "Seminar Kit",
@@ -313,7 +335,9 @@ export default function Home() {
             <h2 className="mt-2 font-heading text-h2-mobile font-bold text-navy lg:text-h2-desktop">
               Simposium Paralel
             </h2>
-            <p className="mt-2 text-sm text-muted">9 sesi · Sabtu, 12 September 2026</p>
+            <p className="mt-2 text-sm text-muted">
+              10 sesi · 5 ruang paralel · Sabtu, 12 September 2026
+            </p>
             <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               {SIMPOSIUM.map((s) => (
                 <article
@@ -321,7 +345,7 @@ export default function Home() {
                   className={`glass-card glass-card-lg overflow-hidden bg-gradient-to-br ${s.tint} p-5 transition-all hover:-translate-y-1 hover:shadow-glass sm:p-6`}
                 >
                   <p className="tag-caps text-gold-dark">
-                    {s.ruangan} · {s.jam}
+                    {s.sesi} · {s.ruangan} · {s.jam}
                   </p>
                   {s.topik ? (
                     <h3 className="mt-3 font-heading text-base font-bold leading-snug text-navy sm:text-lg">
@@ -335,6 +359,11 @@ export default function Home() {
                   <p className="mt-3 text-sm font-semibold leading-snug text-gold-dark sm:text-[0.95rem]">
                     {s.narasumber}
                   </p>
+                  {s.moderator && (
+                    <p className="mt-2 text-xs leading-snug text-muted">
+                      Moderator: {s.moderator}
+                    </p>
+                  )}
                 </article>
               ))}
             </div>
