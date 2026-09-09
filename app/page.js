@@ -134,13 +134,7 @@ const SIMPOSIUM = [
 const TICKETS = [
   {
     name: "Pendaftaran Ditutup",
-    price: "Rp 750.000",
-    memberPriceLabel: "Anggota IAI DIY",
-    memberPrice: "Rp 650.000",
-    active: true,
-    highlighted: true,
-    badge: "Hingga 6 Sep 2026",
-    badgeActive: true,
+    closed: true,
   },
 ];
 
@@ -226,9 +220,6 @@ export default function Home() {
                   </blockquote>
                 </div>
                 <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
-                  <Link href="#daftar" className="btn-primary">
-                    Daftar Sekarang
-                  </Link>
                   <Link href="#tentang" className="btn-outline">
                     Tentang Acara ↓
                   </Link>
@@ -421,66 +412,16 @@ export default function Home() {
               </ul>
             </div>
             <div className="mt-8 grid gap-4 sm:mx-auto sm:max-w-md">
-              {TICKETS.map((ticket) => {
-                const isInactive = ticket.featured && !ticket.active;
-                const isHighlighted = ticket.highlighted;
-
-                return (
+              {TICKETS.map((ticket) => (
                 <article
                   key={ticket.name}
-                  className={`flex flex-col rounded-[28px] border p-5 sm:p-6 ${
-                    isHighlighted
-                      ? "relative overflow-hidden border-gold/50 bg-gradient-to-br from-gold/25 via-white/55 to-cream-warm/70 shadow-[0_12px_40px_rgba(255,184,28,0.22)] ring-2 ring-gold/30"
-                      : isInactive
-                      ? "border-navy/40 bg-navy text-cream-bg shadow-glass opacity-60"
-                      : "glass-card glass-card-lg"
-                  }`}
+                  className="flex min-h-[140px] flex-col items-center justify-center rounded-[28px] border border-red/40 bg-gradient-to-br from-red/20 via-red-soft/30 to-red/10 px-6 py-10 text-center shadow-[0_12px_40px_rgba(180,40,40,0.18)] ring-2 ring-red/25 sm:min-h-[160px] sm:py-12"
                 >
-                  <div className="flex flex-wrap items-start justify-between gap-2">
-                    <h3
-                      className={`font-heading text-lg font-bold ${
-                        isInactive ? "text-cream-bg" : "text-navy"
-                      }`}
-                    >
-                      {ticket.name}
-                    </h3>
-                    {ticket.badge && (
-                      <span
-                        className={`tag-caps flex shrink-0 items-center gap-1 rounded-full px-2 py-1 ${
-                          ticket.badgeActive
-                            ? "bg-wa/15 text-wa ring-1 ring-wa/25"
-                            : "bg-white/20 text-cream-bg/80"
-                        }`}
-                      >
-                        {ticket.badgeActive && (
-                          <span className="h-1.5 w-1.5 rounded-full bg-wa" aria-hidden />
-                        )}
-                        {ticket.badge}
-                      </span>
-                    )}
-                  </div>
-                  <p
-                    className={`mt-3 font-heading font-bold ${
-                      ticket.strikethrough ? "line-through opacity-70" : ""
-                    } ${isHighlighted ? "text-3xl text-navy sm:text-4xl" : "text-2xl"} ${
-                      isInactive ? "text-cream-bg" : isHighlighted ? "" : "text-navy"
-                    }`}
-                  >
-                    {ticket.price}
-                  </p>
-                  {ticket.memberPrice && (
-                    <div className="mt-3 flex items-center justify-between gap-3 rounded-2xl border border-gold/40 bg-white/75 px-4 py-3 shadow-sm backdrop-blur-sm">
-                      <p className="font-heading text-lg font-bold text-gold-dark">
-                        {ticket.memberPriceLabel}
-                      </p>
-                      <p className="shrink-0 text-right font-heading text-3xl font-bold text-gold-dark sm:text-4xl">
-                        {ticket.memberPrice}
-                      </p>
-                    </div>
-                  )}
+                  <h3 className="font-heading text-3xl font-bold leading-tight text-red sm:text-4xl">
+                    {ticket.name}
+                  </h3>
                 </article>
-                );
-              })}
+              ))}
             </div>
             <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
               <a
@@ -490,14 +431,6 @@ export default function Home() {
                 className="btn-wa w-full max-w-md sm:w-auto sm:min-w-[280px]"
               >
                 Chat Vee
-              </a>
-              <a
-                href="https://event.iaidiy.id/login?event=konferda-pie-yo-2026"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[44px] w-full max-w-md items-center justify-center gap-2 rounded-full bg-navy px-6 text-sm font-semibold text-white transition-all hover:bg-navy/90 active:scale-[0.98] sm:w-auto sm:min-w-[280px]"
-              >
-                Daftar Sekarang
               </a>
             </div>
             <div className="mt-6 space-y-3 text-xs text-muted sm:text-sm">
