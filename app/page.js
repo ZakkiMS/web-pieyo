@@ -133,7 +133,7 @@ const SIMPOSIUM = [
 
 const TICKETS = [
   {
-    name: "Kuota Terbatas",
+    name: "Pendaftaran Ditutup",
     price: "Rp 750.000",
     memberPriceLabel: "Anggota IAI DIY",
     memberPrice: "Rp 650.000",
