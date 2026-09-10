@@ -65,7 +65,7 @@ const SIMPOSIUM = [
     sesi: "Materi 1",
     narasumber: "apt. Tunggul Wardani, M.Farm",
     topik:
-      "Transformasi Praktik Kefarmasian Modern dalam Perawatan Luka: Peran Strategis Octenidin dan Allantoin",
+      "Transformasi Praktik Kefarmasian Modern dalam Perawatan Luka: Peran Strategis Octenidine dan Allantoin",
     moderator: "apt. Shofia Wijayanti, M.Farm",
   },
   {
@@ -82,8 +82,8 @@ const SIMPOSIUM = [
     sesi: "Materi 1",
     narasumber: "apt. Eliza Dwinta, M.Pharm., Sci",
     topik:
-      "Beyond Burnout: Fostering Resilience and Well-being Among Pharmacists for the Intelligent Future",
-    moderator: "apt. Yunlistianingsih, M.Farm",
+      "Beyond Boundaries: Fostering Resilience and Well-being Among Pharmacists for the Intelligent Future",
+    moderator: "apt. Yunitasiningsih, M.Farm",
   },
   {
     ruangan: "Arjuna 2",
@@ -100,13 +100,15 @@ const SIMPOSIUM = [
     sesi: "Materi 2",
     narasumber: "Prof. Dr. Ika Puspita Sari, S.Si., M.Si., Apt.",
     topik: "One Health dalam Pengendalian Resistensi Antimikroba: Peran Strategis Apoteker",
+    moderator: "apt. Arifanti Piskana S., M.Pharm.Clin",
   },
   {
     ruangan: "Ballroom 2",
     jam: "15.00–16.30",
     sesi: "Materi 2",
     narasumber: "Prof. apt. Suci Hanifah, Ph.D",
-    topik: "Management Intravenous Medication Problem's and Incompatibilities in The ICU",
+    topik: "Management Intravenous Medication Problems and Incompatibilities in the ICU",
+    moderator: "apt. Shofia Wijayanti, M.Farm",
   },
   {
     ruangan: "Arjuna 1",
@@ -114,13 +116,15 @@ const SIMPOSIUM = [
     sesi: "Materi 2",
     narasumber: "Dr. apt. Ani Kristiani, M.Clin.Pharm",
     topik: "Pengembangan Bahan Alam untuk Depresi",
+    moderator: "apt. Kuswardhani Dwi Atmini, MSc",
   },
   {
     ruangan: "Kresna",
     jam: "15.00–16.30",
     sesi: "Materi 2",
-    narasumber: "Dr. apt. Fuwi Kurniawati, S.Farm., M.Sc.",
+    narasumber: "Dr. apt. Fuvi Kurniawati, S.Farm., M.Sc.",
     topik: "From Data to Decision: Apoteker sebagai Garda Terdepan Keamanan Obat di Era Digital",
+    moderator: "apt. Yunitasiningsih, M.Farm",
   },
   {
     ruangan: "Arjuna 2",
@@ -128,6 +132,7 @@ const SIMPOSIUM = [
     sesi: "Materi 2",
     narasumber: "Dr. apt. Christine Patramurti",
     topik: "Peran Apoteker di Era Pengobatan Presisi",
+    moderator: "Apt. Nurul Hikmah, M. Clin. Pharm",
   },
 ].map((item, i) => ({ ...item, tint: SIMPOSIUM_TINTS[i % SIMPOSIUM_TINTS.length] }));
 
