@@ -437,6 +437,14 @@ export default function Home() {
               >
                 Chat Vee
               </a>
+              <a
+                href="https://event.iaidiy.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[44px] w-full max-w-md items-center justify-center gap-2 rounded-full bg-navy px-6 text-sm font-semibold text-white transition-all hover:bg-navy/90 active:scale-[0.98] sm:w-auto sm:min-w-[280px]"
+              >
+                Login EDIY
+              </a>
             </div>
             <div className="mt-6 space-y-3 text-xs text-muted sm:text-sm">
               <p>
